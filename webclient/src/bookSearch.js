@@ -1,9 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function App() {
+function BookSearch() {
   const [searchCriteria, setSearchCriteria] = useState({});
   const [books, setBooks] = useState([]);
 
@@ -16,7 +14,7 @@ function App() {
 
   const searchBooks = async () => {
     try {
-      const response = await axios.get('https://localhost:7224/api/Book/SearchBooks', {
+      const response = await axios.get('/api/books', {
         params: searchCriteria
       });
       setBooks(response.data);
@@ -29,9 +27,9 @@ function App() {
     <div>
       <h2>Book Search</h2>
       <div>
-        <input type="text" name="firstname" placeholder="First Name" onChange={handleInputChange} />
+        <input type="text" name="author" placeholder="Author" onChange={handleInputChange} />
         <input type="text" name="isbn" placeholder="ISBN" onChange={handleInputChange} />
-        <input type="text" name="category" placeholder="category" onChange={handleInputChange} />
+        <input type="text" name="status" placeholder="Status" onChange={handleInputChange} />
         <button onClick={searchBooks}>Search</button>
       </div>
       <div>
@@ -40,18 +38,18 @@ function App() {
           <thead>
             <tr>
               <th>Title</th>
-              <th>First Name</th>
+              <th>Author</th>
               <th>ISBN</th>
-              <th>Category</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
             {books.map(book => (
               <tr key={book.id}>
                 <td>{book.title}</td>
-                <td>{book.firstName}</td>
+                <td>{book.author}</td>
                 <td>{book.isbn}</td>
-                <td>{book.category}</td>
+                <td>{book.status}</td>
               </tr>
             ))}
           </tbody>
@@ -61,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default bookSearch;
