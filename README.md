@@ -27,6 +27,10 @@ This is a book library project built with .NET Core for the backend and React wi
 4. Set up the frontend by navigating to the `client` directory and running `npm install` followed by `npm start`.
 5. Access the application in your browser at `http://localhost:3000`.
 
+## Extension VS Code
+
+- Install PostCSS Language Support
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

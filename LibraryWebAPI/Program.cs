@@ -1,3 +1,4 @@
+using LibraryWebAPI.EventHandlers;
 using LibraryWebAPI.Logic;
 using LibraryWebAPI.Logic.Interface;
 using LibraryWebAPI.Models;
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<BookContext>(options =>
                         options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
 builder.Services.AddScoped<IBook, BookLogic>();
+builder.Services.AddScoped<SearchEventHandler>();
 
 builder.Services.AddCors();
 

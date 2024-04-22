@@ -1,0 +1,5 @@
+{
+    "baseUrls":{
+        "services": "https://localhost:7224"
+    }
+}
