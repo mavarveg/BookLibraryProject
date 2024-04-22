@@ -34,3 +34,7 @@ This is a book library project built with .NET Core for the backend and React wi
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Screen
+![image](https://github.com/mavarveg/BookLibraryProject/assets/16997790/4e23067b-95d9-4234-9864-e08ffef372ff)
+
